@@ -1,4 +1,4 @@
 package com.disruption.AnyPub4J.Objects;
 
-public class User {
+public class Account {
 }
