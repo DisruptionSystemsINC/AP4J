@@ -2,6 +2,7 @@ package com.disruption.AnyPub4J;
 
 import com.disruption.AnyPub4J.API.ChorusRequestEngine;
 import com.disruption.AnyPub4J.API.EventListener;
+import com.disruption.AnyPub4J.API.InstanceObjectBuildHelper;
 import com.disruption.AnyPub4J.Objects.Instance;
 import com.disruptionsystems.DragonLog;
 
@@ -20,6 +21,7 @@ public class AP4J {
             this.logger = new DragonLog();
         } else {
             this.logger = logger;
+            this.homeInstance = new InstanceObjectBuildHelper().buildInstance(this);
         }
         this.APIEndpoint = APIEndpoint;
         this.eventListeners = eventListeners;
@@ -43,5 +45,9 @@ public class AP4J {
 
     protected void setClientSecret(String secret){
         this.client_secret = secret;
+    }
+
+    public Instance getHomeInstance(){
+        return homeInstance;
     }
 }

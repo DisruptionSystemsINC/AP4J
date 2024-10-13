@@ -40,6 +40,38 @@ public class InstanceConfiguration {
         return node.path("media_attachments").get("image_matrix_limit").asInt();
     }
 
-    public int getVideoSizeLimit
+    public int getVideoSizeLimit(){
+        return node.path("media_attachments").get("video_size_limit").asInt();
+    }
+
+    public int getVideoFrameRateLimit(){
+        return node.path("media_attachments").get("video_frame_rate_limit").asInt();
+    }
+
+    public int getVideoMatrixLimit(){
+        return node.path("media_attachments").get("video_matrix_limit").asInt();
+    }
+
+    public int getMaxPollOptions(){
+        return node.path("polls").get("max_options").asInt();
+    }
+
+    public int getMaxCharsPerPollOption(){
+        return node.path("polls").get("max_characters_per_option").asInt();
+    }
+
+    public int getMinPollExpiration(){
+        return node.path("polls").get("min_expiration").asInt();
+    }
+
+    public int getPollMaxExpiration(){
+        return node.path("polls").get("max_expiration").asInt();
+    }
+
+    public int getMaxReactions(){
+        return node.path("reactions").get("max_reactions").asInt();
+    }
+
+
 
 }

@@ -71,7 +71,7 @@ public class Request {
         try {
             response = client.execute(post);
             HttpEntity responseEntity = response.getEntity();
-            System.out.println(new String(responseEntity.getContent().readAllBytes()));
+            node = new JsonMapper().readTree(responseEntity.getContent().readAllBytes());
         } catch (IOException e) {
             ap4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while posting Request. Error: " + e.getMessage());
         }
