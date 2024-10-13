@@ -2,12 +2,14 @@ package com.disruption.AnyPub4J.API;
 
 import com.disruption.AnyPub4J.AP4J;
 import com.disruption.AnyPub4J.API.Core.AccountConfiguration.AccountFields;
+import com.disruption.AnyPub4J.API.util.JSONConverter;
 import com.disruption.AnyPub4J.Objects.Account;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class AccountObjectBuildHelper {
     public Account createAccount(AP4J ap4J, JsonNode instanceNode){
         JsonNode accountNode = instanceNode.path("contact_account");
+        JSONConverter conv = new JSONConverter();
         return new Account(
                 accountNode.get("id").asText(),
                 accountNode.get("username").asText(),
@@ -26,9 +28,9 @@ public class AccountObjectBuildHelper {
                 accountNode.get("avatar_static").asText(),
                 accountNode.get("header").asText(),
                 accountNode.get("header_static").asText(),
-                accountNode.get("emojis"),
+                conv.jsonNodeToStringArray(accountNode.get("emojis")),
                 accountNode.get("moved").asText(),
-                new AccountFields(ap4J),
+                new AccountFields(accountNode),
                 accountNode.get("bot").asBoolean(),
                 accountNode.get("discoverable").asBoolean()
         );

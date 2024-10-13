@@ -3,7 +3,7 @@ package com.disruption.AnyPub4J.Objects;
 import com.disruption.AnyPub4J.API.Core.AccountConfiguration.AccountFields;
 
 public class Account {
-    Account(
+    public Account(
             String id,
             String username,
             String acct,

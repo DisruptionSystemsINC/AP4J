@@ -1,6 +1,6 @@
 package com.disruption.AnyPub4J.API.Core.AccountConfiguration;
 
-import com.disruption.AnyPub4J.AP4J;
+import com.disruption.AnyPub4J.API.util.JSONConverter;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class AccountFields {
@@ -9,16 +9,8 @@ public class AccountFields {
         this.node = node;
     }
 
-    public String[][] getAll(){
-         String[] fields = jsonNodeToStringArray(node.get("fields"));
-    }
-
-
-    private String[] jsonNodeToStringArray(JsonNode node){
-        String[] arr = new String[node.size()];
-        for (int i = 0; i < node.size(); i++){
-            arr[i] = node.get(i).asText();
-        }
-        return arr;
+    public String[] getAll(){
+        JSONConverter conv = new JSONConverter();
+         return conv.jsonNodeToStringArray(node.path("fields"));
     }
 }
