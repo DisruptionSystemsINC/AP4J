@@ -22,7 +22,7 @@ import java.net.http.HttpClient;
 
 public class Request {
     public JsonNode get(String uri, AP4J ap4J) {
-        StringBuffer response = null;
+        StringBuffer response = new StringBuffer();
         BufferedReader reader;
         JsonNode node = null;
         URL url = null;

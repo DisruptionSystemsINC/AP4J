@@ -16,13 +16,13 @@ public class AP4J {
     private EventListener[] eventListeners;
 
     public AP4J(DragonLog logger, String APIEndpoint, EventListener[] eventListeners) {
-
         if (logger == null) {
             this.logger = new DragonLog();
         } else {
             this.logger = logger;
-            this.homeInstance = new InstanceObjectBuildHelper().buildInstance(this);
         }
+        this.cre = new ChorusRequestEngine();
+        this.homeInstance = new InstanceObjectBuildHelper().buildInstance(this);
         this.APIEndpoint = APIEndpoint;
         this.eventListeners = eventListeners;
     }
