@@ -3,8 +3,6 @@ package com.disruption.AnyPub4J.API.Core;
 import com.disruption.AnyPub4J.API.util.JSONConverter;
 import com.fasterxml.jackson.databind.JsonNode;
 
-import java.util.List;
-
 public class InstanceConfiguration {
     JsonNode node;
     public InstanceConfiguration(JsonNode node){

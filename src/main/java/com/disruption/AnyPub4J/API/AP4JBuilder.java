@@ -2,7 +2,6 @@ package com.disruption.AnyPub4J.API;
 
 import com.disruption.AnyPub4J.AP4J;
 import com.disruptionsystems.DragonLog;
-import jdk.jfr.Description;
 
 public class AP4JBuilder {
     private EventListener[] eventListeners;

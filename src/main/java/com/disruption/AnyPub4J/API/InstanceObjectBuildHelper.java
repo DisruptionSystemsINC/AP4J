@@ -5,7 +5,6 @@ import com.disruption.AnyPub4J.API.Core.InstanceConfiguration;
 import com.disruption.AnyPub4J.API.Core.InstanceStats;
 import com.disruption.AnyPub4J.API.Core.InstanceURLs;
 import com.disruption.AnyPub4J.API.util.JSONConverter;
-import com.disruption.AnyPub4J.Objects.Account;
 import com.disruption.AnyPub4J.Objects.Instance;
 import com.disruptionsystems.logging.LogLevel;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -238,3 +238,9 @@ Cannot construct instance of `com.disruption.AnyPub4J.Objects.Instance` (no Crea
 [INFORMATION] System Startup complete. Awaiting Input
 [31m[2024-10-13    22:47:41]     
 [ERROR] The instance does not support this function: com.disruption.Objects.Account.getUri()
+[32m[2024-10-14    00:06:58]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-14    00:06:58]     
+[ERROR] The instance does not support this function: com.disruption.Objects.Account.getUri()
+[32m[2024-10-14    00:07:14]     
+[INFORMATION] System Startup complete. Awaiting Input

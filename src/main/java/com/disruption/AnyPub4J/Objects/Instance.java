@@ -4,9 +4,7 @@ import com.disruption.AnyPub4J.AP4J;
 import com.disruption.AnyPub4J.API.Core.InstanceConfiguration;
 import com.disruption.AnyPub4J.API.Core.InstanceStats;
 import com.disruption.AnyPub4J.API.Core.InstanceURLs;
-import com.disruption.AnyPub4J.API.exceptions.UnsupportedFieldException;
 import com.disruptionsystems.logging.LogLevel;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.Objects;
 

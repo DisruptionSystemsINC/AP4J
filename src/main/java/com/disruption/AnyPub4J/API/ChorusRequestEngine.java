@@ -1,9 +1,6 @@
 package com.disruption.AnyPub4J.API;
 
 import com.disruption.AnyPub4J.AP4J;
-import com.fasterxml.jackson.databind.JsonNode;
-
-import java.net.http.HttpRequest;
 
 public class ChorusRequestEngine {
     public String newRequest(RequestType type, AP4J ap4J){
