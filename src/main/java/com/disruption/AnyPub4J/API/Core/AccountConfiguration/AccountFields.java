@@ -5,12 +5,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 public class AccountFields {
     private JsonNode node;
+    private String[] fields;
     public AccountFields(JsonNode node){
         this.node = node;
     }
 
     public String[] getAll(){
         JSONConverter conv = new JSONConverter();
-         return conv.jsonNodeToStringArray(node.path("fields"));
+         return fields = conv.jsonNodeToStringArray(node.path("fields"));
     }
 }

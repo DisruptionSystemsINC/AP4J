@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class HTTPTests {
     public static void main(String[] args) {
-        AP4J bot = new AP4JBuilder().setEndpoint("https://derg.social/api/v1/").build();
-        System.out.println(bot.getHomeInstance());
+        AP4J bot = new AP4JBuilder().setEndpoint("https://balfolk.social/api/v1/").build();
+        System.out.println(bot.getHomeInstance().getContactAccount().getUri());
     }
 }

@@ -22,9 +22,9 @@ public class AP4J {
             this.logger = logger;
         }
         this.cre = new ChorusRequestEngine();
-        this.homeInstance = new InstanceObjectBuildHelper().buildInstance(this);
         this.APIEndpoint = APIEndpoint;
         this.eventListeners = eventListeners;
+        this.homeInstance = new InstanceObjectBuildHelper().buildInstance(this);
     }
 
     public DragonLog getLogger() {

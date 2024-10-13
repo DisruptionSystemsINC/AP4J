@@ -21,7 +21,7 @@ import java.net.*;
 import java.net.http.HttpClient;
 
 public class Request {
-    public JsonNode get(String uri, AP4J ap4J) {
+    public String get(String uri, AP4J ap4J) {
         StringBuffer response = new StringBuffer();
         BufferedReader reader;
         JsonNode node = null;
@@ -49,19 +49,15 @@ public class Request {
             ap4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while getting Request. Error: " + e.getMessage());
         }
 
-        try{
-            node = new JsonMapper().readTree(response.toString());
-        } catch (JsonProcessingException e){
-            ap4J.getLogger().printToLog(LogLevel.ERROR, "The JSON of this request could not be parsed.: " + e.getMessage());
-        }
-        return node;
+        return response.toString();
     }
 
-    public JsonNode postForm(String uri, String[][] dataArray, AP4J ap4J){
+    public String postForm(String uri, String[][] dataArray, AP4J ap4J){
         MultipartEntityBuilder builder = MultipartEntityBuilder.create();
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(uri);
         JsonNode node = null;
+        String json = null;
         for (String[] data : dataArray) {
             builder.addTextBody(data[0], data[1]);
         }
@@ -71,11 +67,12 @@ public class Request {
         try {
             response = client.execute(post);
             HttpEntity responseEntity = response.getEntity();
-            node = new JsonMapper().readTree(responseEntity.getContent().readAllBytes());
+            json = new String(responseEntity.getContent().readAllBytes());
+            node = new JsonMapper().readTree(json);
         } catch (IOException e) {
             ap4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while posting Request. Error: " + e.getMessage());
         }
-        return node;
+        return json;
     }
 
 }

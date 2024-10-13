@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.net.http.HttpRequest;
 
 public class ChorusRequestEngine {
-    public JsonNode newRequest(RequestType type, AP4J ap4J){
+    public String newRequest(RequestType type, AP4J ap4J){
         switch(type){
             case TOKEN_REFRESH -> {
                 new Request().postForm(ap4J.getAPIEndpoint() + "apps", new String[][]{{"client_name", "AP4J CHORUS REQUEST ENGINE"}, {"redirect_uris", "urn:ietf:wg:oauth:2.0:oob"}, {"scopes", "read write push"}, {"website", "https://disruption-systems.com"}}, ap4J);
@@ -18,7 +18,7 @@ public class ChorusRequestEngine {
         return null;
     }
 
-    public JsonNode newRequest(RequestType type, AP4J ap4J, String baseUrl){
+    public String newRequest(RequestType type, AP4J ap4J, String baseUrl){
         switch(type){
             case TOKEN_REFRESH -> {
                 new Request().postForm(ap4J.getAPIEndpoint() + "apps", new String[][]{{"client_name", "AP4J CHORUS REQUEST ENGINE"}, {"redirect_uris", "urn:ietf:wg:oauth:2.0:oob"}, {"scopes", "read write push"}, {"website", "https://disruption-systems.com"}}, ap4J);

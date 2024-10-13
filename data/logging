@@ -108,3 +108,133 @@
 [INFORMATION] System Startup complete. Awaiting Input
 [32m[2024-10-13    19:11:31]     
 [INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:05:48]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:08:39]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:09:25]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:09:41]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:17:07]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:17:12]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:18:46]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:19:11]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:22:59]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:23:03]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:24:28]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:24:30]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:31:50]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:32:28]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:32:47]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:32:49]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:46:10]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:52:26]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    20:52:26]     
+[ERROR] Error encountered while getting Request. Error code: 401 : Unauthorized
+[32m[2024-10-13    20:52:53]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    20:52:53]     
+[ERROR] Error encountered while getting Request. Error code: 404 : Not Found
+[32m[2024-10-13    20:53:50]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:53:56]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:54:19]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    20:55:40]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:00:28]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:00:29]     
+[ERROR] Seems like this did not work
+[32m[2024-10-13    21:00:45]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:00:46]     
+[ERROR] Seems like this did not work No content to map due to end-of-input
+ at [Source: (String)""; line: 1, column: 0]
+[32m[2024-10-13    21:01:26]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:01:27]     
+[ERROR] Seems like this did not work No content to map due to end-of-input
+ at [Source: (String)""; line: 1, column: 0]
+[32m[2024-10-13    21:09:34]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:09:34]     
+[ERROR] Failure building instance. It might not be supported.
+[32m[2024-10-13    21:09:51]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:09:52]     
+[ERROR] Failure building instance. It might not be supported.
+Cannot construct instance of `com.disruption.AnyPub4J.Objects.Instance` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (String)"{"uri":"https://balfolk.social","title":"Balfolk.social","short_description":"For balfolk related topics combining dancing and p","description":"For balfolk related topics combining dancing and playing music.","email":"ademin@balfolk.social","version":"3.0.0 (compatible; Firefish 1.0.5-rc)","urls":{"streaming_api":"wss://balfolk.social/streaming"},"stats":{"user_count":403,"status_count":479,"domain_count":157},"thumbnail":"/static-assets/transparent.png","languages":[],"registrations":true,"app"[truncated 1743 chars]; line: 1, column: 2]
+[32m[2024-10-13    21:11:23]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:11:23]     
+[ERROR] Failure building instance. It might not be supported.
+Cannot construct instance of `com.disruption.AnyPub4J.Objects.Instance` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (String)"{"uri":"https://balfolk.social","title":"Balfolk.social","short_description":"For balfolk related topics combining dancing and p","description":"For balfolk related topics combining dancing and playing music.","email":"ademin@balfolk.social","version":"3.0.0 (compatible; Firefish 1.0.5-rc)","urls":{"streaming_api":"wss://balfolk.social/streaming"},"stats":{"user_count":403,"status_count":479,"domain_count":157},"thumbnail":"/static-assets/transparent.png","languages":[],"registrations":true,"app"[truncated 1743 chars]; line: 1, column: 2]
+[32m[2024-10-13    21:25:32]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    21:25:32]     
+[ERROR] Failure building instance. It might not be supported.
+Cannot construct instance of `com.disruption.AnyPub4J.Objects.Instance` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (String)"{"uri":"https://balfolk.social","title":"Balfolk.social","short_description":"For balfolk related topics combining dancing and p","description":"For balfolk related topics combining dancing and playing music.","email":"ademin@balfolk.social","version":"3.0.0 (compatible; Firefish 1.0.5-rc)","urls":{"streaming_api":"wss://balfolk.social/streaming"},"stats":{"user_count":403,"status_count":479,"domain_count":157},"thumbnail":"/static-assets/transparent.png","languages":[],"registrations":true,"app"[truncated 1743 chars]; line: 1, column: 2]
+[32m[2024-10-13    21:28:21]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:28:56]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:29:02]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:32:51]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:33:38]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:33:54]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    21:59:39]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:33:44]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:34:04]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:34:20]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:34:34]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:34:59]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:35:09]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:35:39]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:38:51]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:41:40]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-13    22:41:57]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    22:41:58]     
+[ERROR] The instance does not support this function
+[32m[2024-10-13    22:42:05]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    22:42:06]     
+[ERROR] The instance does not support this function
+[32m[2024-10-13    22:47:41]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-13    22:47:41]     
+[ERROR] The instance does not support this function: com.disruption.Objects.Account.getUri()
