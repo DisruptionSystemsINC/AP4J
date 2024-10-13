@@ -1,8 +1,8 @@
 package com.disruption.AnyPub4J.Objects;
 
-import com.disruption.AnyPub4J.Objects.Core.InstanceConfiguration;
-import com.disruption.AnyPub4J.Objects.Core.InstanceStats;
-import com.disruption.AnyPub4J.Objects.Core.InstanceURLs;
+import com.disruption.AnyPub4J.API.Core.InstanceConfiguration;
+import com.disruption.AnyPub4J.API.Core.InstanceStats;
+import com.disruption.AnyPub4J.API.Core.InstanceURLs;
 
 public class Instance {
     public Instance(

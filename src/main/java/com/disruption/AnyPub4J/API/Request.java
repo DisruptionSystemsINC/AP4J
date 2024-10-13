@@ -21,7 +21,7 @@ import java.net.*;
 import java.net.http.HttpClient;
 
 public class Request {
-    public static JsonNode get(String uri) {
+    public JsonNode get(String uri, AP4J ap4J) {
         StringBuffer response = null;
         BufferedReader reader;
         JsonNode node = null;
@@ -29,7 +29,7 @@ public class Request {
         try {
             url = new URI(uri).toURL();
         } catch (URISyntaxException | MalformedURLException e) {
-            AP4J.getLogger().printToLog(LogLevel.ERROR, "The given instance_url is invalid. Shutting down.");
+            ap4J.getLogger().printToLog(LogLevel.ERROR, "The given instance_url is invalid. Shutting down.");
             System.exit(1);
         }
         try {
@@ -37,7 +37,7 @@ public class Request {
             con.addRequestProperty("client_name", "AP4J Request Engine");
             con.setRequestMethod("GET");
             if (con.getResponseCode() != 200){
-                AP4J.getLogger().printToLog(LogLevel.ERROR, "Error encountered while getting Request. Error code: " + con.getResponseCode() + " : " + con.getResponseMessage());
+                ap4J.getLogger().printToLog(LogLevel.ERROR, "Error encountered while getting Request. Error code: " + con.getResponseCode() + " : " + con.getResponseMessage());
                 return null;
             }
             reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -46,18 +46,18 @@ public class Request {
                 response.append(line);
             }
         } catch (IOException e){
-            AP4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while getting Request. Error: " + e.getMessage());
+            ap4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while getting Request. Error: " + e.getMessage());
         }
 
         try{
             node = new JsonMapper().readTree(response.toString());
         } catch (JsonProcessingException e){
-            AP4J.getLogger().printToLog(LogLevel.ERROR, "The JSON of this request could not be parsed.: " + e.getMessage());
+            ap4J.getLogger().printToLog(LogLevel.ERROR, "The JSON of this request could not be parsed.: " + e.getMessage());
         }
         return node;
     }
 
-    public static JsonNode postForm(String uri, String[][] dataArray){
+    public JsonNode postForm(String uri, String[][] dataArray, AP4J ap4J){
         MultipartEntityBuilder builder = MultipartEntityBuilder.create();
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(uri);
@@ -73,7 +73,7 @@ public class Request {
             HttpEntity responseEntity = response.getEntity();
             System.out.println(new String(responseEntity.getContent().readAllBytes()));
         } catch (IOException e) {
-            AP4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while posting Request. Error: " + e.getMessage());
+            ap4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while posting Request. Error: " + e.getMessage());
         }
         return node;
     }

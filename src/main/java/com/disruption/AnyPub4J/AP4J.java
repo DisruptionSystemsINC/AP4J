@@ -1,31 +1,47 @@
 package com.disruption.AnyPub4J;
 
+import com.disruption.AnyPub4J.API.ChorusRequestEngine;
+import com.disruption.AnyPub4J.API.EventListener;
 import com.disruption.AnyPub4J.Objects.Instance;
 import com.disruptionsystems.DragonLog;
 
 public class AP4J {
-    private static String APIEndpoint;
-    private static Instance homeInstance;
-    private static DragonLog logger;
-    private static String client_id;
-    private static String client_secret;
+    private String APIEndpoint;
+    private Instance homeInstance;
+    private ChorusRequestEngine cre;
+    private DragonLog logger;
+    private String client_id;
+    private String client_secret;
+    private EventListener[] eventListeners;
 
-    public AP4J(){
+    public AP4J(DragonLog logger, String APIEndpoint, EventListener[] eventListeners) {
 
+        if (logger == null) {
+            this.logger = new DragonLog();
+        } else {
+            this.logger = logger;
+        }
+        this.APIEndpoint = APIEndpoint;
+        this.eventListeners = eventListeners;
     }
 
-
-    public static AP4J build(){
-        logger = new DragonLog();
-
-        return new AP4J();
+    public DragonLog getLogger() {
+        return this.logger;
     }
 
-    public static DragonLog getLogger() {return logger;}
+    public ChorusRequestEngine getCre() {
+        return this.cre;
+    }
 
-    public static void setLogger(DragonLog logger1) {logger = logger1;}
+    public String getAPIEndpoint() {
+        return APIEndpoint;
+    }
 
-    public static String getAPIEndpoint() {return APIEndpoint;}
+    protected void setClientID(String id){
+        this.client_id = id;
+    }
 
-    public static void setAPIEndpoint(String APIEndpoint) {AP4J.APIEndpoint = APIEndpoint;}
+    protected void setClientSecret(String secret){
+        this.client_secret = secret;
+    }
 }
