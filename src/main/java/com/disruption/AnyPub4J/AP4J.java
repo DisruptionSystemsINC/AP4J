@@ -11,16 +11,18 @@ public class AP4J {
     private Instance homeInstance;
     private ChorusRequestEngine cre;
     private DragonLog logger;
+    private String name;
     private String client_id;
     private String client_secret;
     private EventListener[] eventListeners;
 
-    public AP4J(DragonLog logger, String APIEndpoint, EventListener[] eventListeners) {
+    public AP4J(DragonLog logger, String APIEndpoint, String name, EventListener[] eventListeners) {
         if (logger == null) {
             this.logger = new DragonLog();
         } else {
             this.logger = logger;
         }
+        this.name = name;
         this.cre = new ChorusRequestEngine();
         this.APIEndpoint = APIEndpoint;
         this.eventListeners = eventListeners;
@@ -36,7 +38,11 @@ public class AP4J {
     }
 
     public String getAPIEndpoint() {
-        return APIEndpoint;
+        return this.APIEndpoint;
+    }
+
+    public String getName(){
+        return this.name;
     }
 
     protected void setClientID(String id){

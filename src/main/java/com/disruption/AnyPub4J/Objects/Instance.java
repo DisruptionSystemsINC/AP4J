@@ -68,7 +68,7 @@ public class Instance {
         if (!Objects.equals(uri, "UNSUPPORTED")) {
             return uri;
         } else {
-            ap4J.getLogger().printToLog(LogLevel.ERROR, "The instance does not support this function");
+            ap4J.getLogger().printToLog(LogLevel.ERROR, "The instance does not support this function: \"com.disruption.AP4J.Objects.Account.getUri()\"");
             return null;
         }
     }

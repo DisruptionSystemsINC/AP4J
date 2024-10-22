@@ -7,12 +7,13 @@ public class AP4JBuilder {
     private EventListener[] eventListeners;
     private DragonLog logger;
     private String endpoint;
+    private String name;
 
     public AP4J build(){
         if (logger==null){
             logger = new DragonLog();
         }
-        return new AP4J(logger, endpoint, eventListeners);
+        return new AP4J(logger, endpoint, name, eventListeners);
     }
 
     public AP4JBuilder addEventListeners(EventListener... eventListeners){
@@ -31,6 +32,11 @@ public class AP4JBuilder {
      */
     public AP4JBuilder setEndpoint(String endpoint){
         this.endpoint = endpoint;
+        return this;
+    }
+
+    public AP4JBuilder setName(String name){
+        this.name = name;
         return this;
     }
 }
