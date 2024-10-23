@@ -1,8 +1,10 @@
 package com.disruption.AnyPub4J;
 
 import com.disruption.AnyPub4J.API.ChorusRequestEngine;
+import com.disruption.AnyPub4J.API.Core.Token;
 import com.disruption.AnyPub4J.API.EventListener;
 import com.disruption.AnyPub4J.API.InstanceObjectBuildHelper;
+import com.disruption.AnyPub4J.API.RequestType;
 import com.disruption.AnyPub4J.Objects.Instance;
 import com.disruptionsystems.DragonLog;
 
@@ -12,11 +14,12 @@ public class AP4J {
     private ChorusRequestEngine cre;
     private DragonLog logger;
     private String name;
-    private String client_id;
-    private String client_secret;
+    private String website;
+    private String[] scopes;
+    private Token token;
     private EventListener[] eventListeners;
 
-    public AP4J(DragonLog logger, String APIEndpoint, String name, EventListener[] eventListeners) {
+    public AP4J(DragonLog logger, String APIEndpoint, String name, EventListener[] eventListeners, String website, String[] scopes) {
         if (logger == null) {
             this.logger = new DragonLog();
         } else {
@@ -26,6 +29,7 @@ public class AP4J {
         this.cre = new ChorusRequestEngine();
         this.APIEndpoint = APIEndpoint;
         this.eventListeners = eventListeners;
+        this.token = this.cre.newRequest(RequestType.TOKEN_REFRESH, this);
         this.homeInstance = new InstanceObjectBuildHelper().buildInstance(this);
     }
 
@@ -45,12 +49,12 @@ public class AP4J {
         return this.name;
     }
 
-    protected void setClientID(String id){
-        this.client_id = id;
+    public String getWebsite(){
+        return this.website;
     }
 
-    protected void setClientSecret(String secret){
-        this.client_secret = secret;
+    public String[] getScopes() {
+        return this.scopes;
     }
 
     public Instance getHomeInstance(){

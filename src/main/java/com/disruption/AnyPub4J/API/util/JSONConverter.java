@@ -10,4 +10,12 @@ public class JSONConverter {
         }
         return arr;
     }
+
+    public String[] jsonNodeToRuleArray(JsonNode node){
+        String[] arr = new String[node.size()];
+        for (int i = 0; i < node.size(); i++){
+            arr[i] = node.path(i).get("text").asText();
+        }
+        return arr;
+    }
 }

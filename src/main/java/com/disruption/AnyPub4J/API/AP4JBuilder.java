@@ -8,12 +8,14 @@ public class AP4JBuilder {
     private DragonLog logger;
     private String endpoint;
     private String name;
+    private String website;
+    private String[] scopes;
 
     public AP4J build(){
         if (logger==null){
             logger = new DragonLog();
         }
-        return new AP4J(logger, endpoint, name, eventListeners);
+        return new AP4J(logger, endpoint, name, eventListeners, website, scopes);
     }
 
     public AP4JBuilder addEventListeners(EventListener... eventListeners){

@@ -38,7 +38,7 @@ public class InstanceObjectBuildHelper {
                 instanceNode.get("invites_enabled").asBoolean(),
                 new InstanceConfiguration(instanceNode),
                 new AccountObjectBuildHelper().createAccount(ap4J, json),
-                conv.jsonNodeToStringArray(instanceNode.get("rules"))
+                conv.jsonNodeToRuleArray(instanceNode.path("rules"))
         );
     }
 }

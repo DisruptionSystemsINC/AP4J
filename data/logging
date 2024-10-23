@@ -244,3 +244,63 @@ Cannot construct instance of `com.disruption.AnyPub4J.Objects.Instance` (no Crea
 [ERROR] The instance does not support this function: com.disruption.Objects.Account.getUri()
 [32m[2024-10-14    00:07:14]     
 [INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:43:02]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:43:48]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:44:15]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:45:41]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:47:56]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:48:09]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:48:27]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-21    06:49:12]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:47:32]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:48:26]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:48:31]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:49:11]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:53:54]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:54:33]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:54:37]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:55:02]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:56:45]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:57:35]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:58:07]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:59:10]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:59:26]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:59:43]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    11:59:50]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    12:00:09]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    12:00:25]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    12:01:15]     
+[INFORMATION] System Startup complete. Awaiting Input
+[32m[2024-10-23    12:01:39]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-23    12:01:59]     
+[ERROR] Error encountered while getting Request. Error code: 401 : Unauthorized
+[32m[2024-10-23    12:02:39]     
+[INFORMATION] System Startup complete. Awaiting Input
+[31m[2024-10-23    12:02:41]     
+[ERROR] Error encountered while getting Request. Error code: 401 : Unauthorized

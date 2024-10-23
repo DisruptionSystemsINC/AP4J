@@ -1,7 +1,10 @@
 package com.disruption.AnyPub4J.API;
 
 import com.disruption.AnyPub4J.AP4J;
+import com.disruption.AnyPub4J.API.Core.Token;
+import com.disruptionsystems.DragonLog;
 import com.disruptionsystems.logging.LogLevel;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.apache.http.HttpEntity;
@@ -48,11 +51,10 @@ public class Request {
         return response.toString();
     }
 
-    public String postForm(String uri, String[][] dataArray, AP4J ap4J){
+    public Token postForm(String uri, String[][] dataArray, AP4J ap4J){
         MultipartEntityBuilder builder = MultipartEntityBuilder.create();
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(uri);
-        JsonNode node = null;
         String json = null;
         for (String[] data : dataArray) {
             builder.addTextBody(data[0], data[1]);
@@ -64,11 +66,14 @@ public class Request {
             response = client.execute(post);
             HttpEntity responseEntity = response.getEntity();
             json = new String(responseEntity.getContent().readAllBytes());
-            node = new JsonMapper().readTree(json);
         } catch (IOException e) {
             ap4J.getLogger().printToLog(LogLevel.ERROR, "Exception caught while posting Request. Error: " + e.getMessage());
         }
-        return json;
+        try {
+            return new Token(new JsonMapper().readTree(json).get(1).asText(), new JsonMapper().readTree(json).get(2).asText());
+        } catch (JsonProcessingException e) {
+            ap4J.getLogger().printToLog(LogLevel.ERROR, "Could not parse this instances token. It might not be supported");
+        }
+        return null;
     }
-
 }
